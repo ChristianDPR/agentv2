@@ -1,0 +1,5 @@
+Solicitud de traspaso
+RUT: 11.222.333-4
+Origen: AFP Modelo
+Destino: AFP Integra
+Estado: Completado

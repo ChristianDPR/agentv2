@@ -1,0 +1,6 @@
+Solicitud de traspaso
+RUT: 12.345.678-9
+Origen: AFP Habitat
+Destino: AFP Capital
+Monto: $5.000.000
+Estado: Completado

@@ -1,0 +1,53 @@
+version: '3.8'
+
+# Docker Compose para PARTICIPANTES del curso
+# Usa imágenes pre-construidas (importadas desde .tar.gz)
+
+networks:
+  coe-ia-network:
+    driver: bridge
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: coe-ia-postgres-final
+    environment:
+      POSTGRES_DB: afp_agents
+      POSTGRES_USER: afp_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-afp_secure_2025}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/bases_datos/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./data/bases_datos/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql
+    networks:
+      - coe-ia-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U afp_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  devcontainer:
+    # NOTA: Esta imagen fue importada desde coe-ia-training-latest.tar.gz
+    # Los participantes NO construyen, solo usan la imagen pre-construida
+    image: coe-ia-training:latest
+    container_name: coe-ia-devcontainer-final
+    volumes:
+      - .:/workspace:cached
+      - vscode-extensions:/home/vscode/.vscode-server/extensions
+      - vscode-extensions-insiders:/home/vscode/.vscode-server-insiders/extensions
+    networks:
+      - coe-ia-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: sleep infinity
+    environment:
+      DATABASE_URL: postgresql://afp_user:${DB_PASSWORD:-afp_secure_2025}@postgres:5432/afp_agents
+
+volumes:
+  postgres_data:
+  vscode-extensions:
+  vscode-extensions-insiders:

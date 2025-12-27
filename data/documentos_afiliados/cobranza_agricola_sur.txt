@@ -1,0 +1,12 @@
+INFORME DE COBRANZA
+========================================
+Empleador: Agrícola del Sur Ltda
+RUT: 76.000.004-4
+Estado: MOROSO
+Deuda total: $15.600.000
+Trabajadores afectados: 85
+Períodos adeudados: Agosto - Noviembre 2024
+Gestiones realizadas:
+- 15/09/2024: Carta de cobranza enviada
+- 01/10/2024: Llamada telefónica sin respuesta
+- 15/10/2024: Segunda carta certificada

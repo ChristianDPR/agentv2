@@ -1,0 +1,9 @@
+SOLICITUD DE TRASPASO
+========================================
+Número: TRP-2024-00078
+RUT: 11.111.111-1
+Nombre: Pedro Rojas Muñoz
+AFP Origen: AFP Modelo
+AFP Destino: AFP PlanVital
+Monto trasladado: $31.800.000
+Estado: EN PROCESO

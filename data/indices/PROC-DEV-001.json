@@ -1,0 +1,176 @@
+{
+  "document_id": "PROC-DEV-001",
+  "title": "Devolución de Cotizaciones",
+  "category": "devoluciones",
+  "source_file": "proc-devolucion-001.pdf",
+  "total_pages": 34,
+  "summary": "**OBJETIVO PRINCIPAL:**\nPermitir a los afiliados recuperar las cotizaciones previsionales obligatorias realizadas en exceso, es decir, sobre el tope imponible legal (82.2 UF), incluyendo su rentabilidad y comisiones.\n\n**REQUISITOS PRINCIPALES:**\n*   Haber cotizado efectivamente sobre el tope imponible (por ingresos superiores, múltiples empleadores o errores).\n*   Ser titular de la cuenta AFP.\n*   Presentar cédula de identidad, Formulario DEV-001, liquidaciones de sueldo/honorarios, certificado de cotizaciones y una cuenta bancaria a nombre del afiliado.\n\n**PROCESO GENERAL (3-4 pasos):**\n1.  **Solicitud:** El afiliado detecta el exceso y presenta la solicitud (web, app o presencial) junto con la documentación requerida.\n2.  **Validación y Cálculo:** La AFP valida la información y calcula el monto a devolver, que incluye el principal, su rentabilidad (la cual es tributable) y la comisión proporcional.\n3.  **Aprobación y Pago:** La AFP aprueba la solicitud y transfiere el monto a la cuenta bancaria del afiliado. En caso de rechazo, el afiliado tiene derecho a apelar.\n\n**PLAZOS IMPORTANTES:**\n*   **Límite para solicitar:** 6 años desde la fecha de la cotización excedente.\n*   **Plazo legal total de la AFP:** Máximo 30 días hábiles (promedio 15 días en AFP Integra).\n*   **Apelación:** 15 días hábiles desde la notificación de rechazo.",
+  "metadata": {
+    "procedure_code": "PROC-DEV-001",
+    "version": "1.0",
+    "date": "2024-01-15",
+    "indexed_at": "2025-11-24T11:00:58.820507Z"
+  },
+  "sections": [
+    {
+      "section_id": "1",
+      "title": "Sección 1",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "page_range": "1-5",
+      "summary": "**TEMA PRINCIPAL:** Devolución de Cotizaciones Previsionales en Exceso.\n\n**PUNTOS CLAVE:**\n*   Permite recuperar cotizaciones realizadas sobre el \"tope imponible\" legal (82.2 UF), incluyendo rentabilidad y comisiones.\n*   Los excesos se producen por ingresos superiores al tope, múltiples empleadores, errores del empleador o sobre-cotización de independientes.\n*   El \"tope imponible\" es el monto máximo de remuneración mensual para cotizaciones obligatorias, expresado en UF y variable diariamente.\n*   Se calcula multiplicando 82.2 UF por el valor de la UF del último día del mes de la cotización.\n\n**REQUISITOS:**\n*   Haber cotizado efectivamente sobre el tope y que esté registrado en la AFP.\n*   Ser titular de la cuenta AFP.\n*   Presentar cédula de identidad, Formulario DEV-001, liquidaciones de sueldo/declaraciones de honorarios, certificado de cotizaciones AFP y certificado de cuenta bancaria.\n\n**PLAZOS:**\n*   Máximo 6 años desde la fecha de la cotización excedente.",
+      "keywords": [
+        "cotizaciones",
+        "tope",
+        "cotización",
+        "imponible",
+        "máximo",
+        "cuenta",
+        "certificado",
+        "tema"
+      ]
+    },
+    {
+      "section_id": "2",
+      "title": "Sección 2",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "page_range": "6-10",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento para la devolución de cotizaciones previsionales excedentes en AFP Integra.\n\n**PUNTOS CLAVE:**\n1.  **Detección:** Se identifica el exceso comparando la Renta Imponible con el Tope Imponible (82.2 UF) mediante liquidaciones, web de AFP o alertas automáticas, incluyendo casos de múltiples empleadores.\n2.  **Solicitud:** El afiliado inicia la solicitud (web, app o presencial) proporcionando datos del período, tipo de exceso, montos y cuenta bancaria.\n3.  **Documentación:** Se requiere el formulario DEV-001, liquidaciones de sueldo, certificado de cotizaciones y bancario.\n4.  **Validación y Cálculo:** AFP valida la información en 5 días hábiles. Si hay observaciones, se otorgan 10 días para subsanar. El monto final, incluyendo rentabilidad, se calcula en 3 días hábiles.\n\n**REQUISITOS:**\n*   Renta Imponible superior al Tope Imponible.\n*   Documentación específica (DEV-001, liquidaciones, certificados).\n*   Cuenta bancaria a nombre del afiliado.\n\n**PLAZOS:**\n*   Validación: 5 días hábiles.\n*   Subsanar observaciones: 10 días hábiles.\n*   Límite legal para reclamar: 6 años.\n*   Cálculo: 3 días hábiles.",
+      "keywords": [
+        "días",
+        "hábiles",
+        "imponible",
+        "liquidaciones",
+        "cotizaciones",
+        "exceso",
+        "renta",
+        "tope"
+      ]
+    },
+    {
+      "section_id": "3",
+      "title": "Sección 3",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "page_range": "11-15",
+      "summary": "**TEMA PRINCIPAL:** Proceso de cálculo, aprobación y pago de la devolución de cotizaciones excedentes en una AFP.\n\n**PUNTOS CLAVE:**\n1.  **Cálculo:** La devolución incluye el principal excedente, su rentabilidad (positiva o negativa) y la comisión proporcional cobrada por la AFP.\n2.  **Aprobación:** El proceso interno (2 días hábiles) implica revisión técnica y de cumplimiento, culminando en una resolución formal.\n3.  **Resultados:** La resolución puede aprobar (detallando monto y plazo de pago) o rechazar (indicando motivos y derecho a apelación).\n4.  **Pago:** El monto aprobado se transfiere vía bancaria (5 días hábiles desde aprobación), con notificaciones y emisión de certificados.\n\n**REQUISITOS:**\n*   Haber cotizado sobre el tope imponible.\n*   Para apelar un rechazo: presentar nuevos antecedentes o corregir errores.\n\n**PLAZOS:**\n*   Aprobación interna: 2 días hábiles.\n*   Pago: 5 días hábiles desde la aprobación.\n*   Apelación: 15 días hábiles desde la notificación de rechazo.",
+      "keywords": [
+        "aprobación",
+        "días",
+        "hábiles",
+        "pago",
+        "desde",
+        "principal",
+        "proceso",
+        "cálculo"
+      ]
+    },
+    {
+      "section_id": "4",
+      "title": "Sección 4",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "page_range": "16-20",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento y Casos Especiales para la Devolución de Cotizaciones Excedentes de AFP.\n\n**PUNTOS CLAVE:**\n1.  **Comprobantes y Tributación:** Se emiten comprobantes de devolución y certificados tributarios, indicando que la rentabilidad generada es tributable.\n2.  **Plazos y Reclamos:** Los pagos se reflejan en 1-2 días hábiles; si no llegan, se debe verificar la cuenta o contactar a la AFP.\n3.  **Causas de Excedentes:** Se detallan casos como múltiples empleadores, trabajadores independientes que cotizan sobre el tope, cambio de AFP, y errores del empleador en la declaración de renta.\n4.  **Documentación y Proceso:** Cada caso especial requiere documentación específica y un proceso particular para la solicitud y validación de la devolución.\n\n**REQUISITOS:** Varían según el caso, incluyendo liquidaciones de sueldo, certificados de cotizaciones, declaraciones de honorarios (F29), boletas, y/o rectificaciones del empleador.\n\n**PLAZOS:** Transferencias bancarias en 1-2 días hábiles.",
+      "keywords": [
+        "devolución",
+        "casos",
+        "cotizaciones",
+        "excedentes",
+        "comprobantes",
+        "certificados",
+        "plazos",
+        "días"
+      ]
+    },
+    {
+      "section_id": "5",
+      "title": "Sección 5",
+      "pages": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "page_range": "21-25",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento para la devolución de cotizaciones AFP en exceso, su tratamiento tributario y plazos.\n\n**PUNTOS CLAVE:**\n1.  **Cotizaciones Mal Imputadas:** Si el empleador paga en un mes incorrecto, él debe re-imputar la cotización al mes correcto; el afiliado no debe solicitar devolución.\n2.  **Licencia Médica:** La devolución procede solo si la suma del subsidio por licencia y el sueldo parcial excede el tope imponible.\n3.  **Tratamiento Tributario:** Solo la rentabilidad generada por la cotización excedente es tributable (con exención si es menor a $1.300.000 anuales); el principal y la comisión no lo son.\n4.  **Responsabilidad Empleador:** El empleador es responsable y debe rectificar si hubo error en monto, mala fe o digitación; en otros casos (múltiples empleadores, renta sobre tope), la responsabilidad es del trabajador.\n\n**REQUISITOS:**\n*   Para cotizaciones mal imputadas: Liquidaciones de ambos meses y certificado del empleador.\n*   Para declaración tributaria: Certificado Tributario de AFP (distingue montos tributables y no tributables).\n\n**PLAZOS:**\n*   **Solicitud de Afiliado:** 6 años desde la fecha de pago de la cotización.\n*   **Respuesta AFP:** Validación (10 días hábiles), Cálculo (5 días hábiles), Aprobación (5 días hábiles), Pago (10 días hábiles).",
+      "keywords": [
+        "empleador",
+        "días",
+        "hábiles",
+        "devolución",
+        "cotizaciones",
+        "tributario",
+        "debe",
+        "cotización"
+      ]
+    },
+    {
+      "section_id": "6",
+      "title": "Sección 6",
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "page_range": "26-30",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento de Devolución de Cotizaciones en Exceso en AFP Integra.\n\n**PUNTOS CLAVE:**\n1.  El proceso tiene un plazo legal máximo de 30 días hábiles, con un promedio real de 15 días hábiles en AFP Integra.\n2.  El seguimiento de la solicitud se realiza vía web, app, call center o email, pasando por estados como \"En Validación\" o \"Con Observaciones\".\n3.  La devolución aplica solo a cotizaciones obligatorias sobre el tope legal (no APV), permitiendo incluir hasta 12 meses por solicitud.\n4.  La rentabilidad de los fondos puede ser negativa, y el depósito se efectúa en una cuenta bancaria válida y a nombre del titular.\n\n**REQUISITOS:**\n-   Cotización sobre el tope legal, con antigüedad no mayor a 6 años.\n-   Documentación legible (ej. liquidaciones de sueldo escaneadas).\n-   Cuenta bancaria activa y a nombre del afiliado titular.\n\n**PLAZOS:**\n-   Máximo legal de la AFP: 30 días hábiles.\n-   Promedio real AFP Integra: 15 días hábiles.\n-   Subsanar observaciones: 10 días.\n-   Prescripción para solicitar: 6 años desde la cotización.",
+      "keywords": [
+        "días",
+        "legal",
+        "hábiles",
+        "integra",
+        "devolución",
+        "cotizaciones",
+        "máximo",
+        "promedio"
+      ]
+    },
+    {
+      "section_id": "7",
+      "title": "Sección 7",
+      "pages": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "page_range": "31-34",
+      "summary": "**TEMA PRINCIPAL:** Gestión de Devoluciones en AFP Integra, incluyendo canales, apelaciones y costos.\n\n**PUNTOS CLAVE:**\n1.  **Canales de Atención:** Múltiples opciones (presencial, telefónico, web, app) para solicitar devoluciones y seguimiento.\n2.  **Apelación y Reclamos:** Procedimiento para apelar solicitudes rechazadas y escalar a la Superintendencia de Pensiones.\n3.  **Gratuidad del Trámite:** El proceso de devolución es totalmente gratuito, alertando sobre estafas de intermediarios.\n4.  **Plazos Importantes:** Tiempos de resolución, apelación (15 días hábiles) y prescripción (6 años).\n\n**REQUISITOS:**\n-   **Apelación:** Formulario DEV-APE-001 y nuevos antecedentes.\n-   **Reclamo SP:** Resolución AFP, antecedentes de respaldo y número de solicitud.\n\n**PLAZOS:**\n-   **Resolución solicitud:** <20 días.\n-   **Apelar:** 15 días hábiles.\n-   **Respuesta AFP apelación:** 10 días.\n-   **Resolución SP:** 30 días hábiles.\n-   **Plazo prescriptivo:** 6 años.",
+      "keywords": [
+        "días",
+        "apelación",
+        "resolución",
+        "hábiles",
+        "devoluciones",
+        "canales",
+        "apelar",
+        "plazos"
+      ]
+    }
+  ]
+}

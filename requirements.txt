@@ -1,0 +1,51 @@
+# ============================================================================
+# Requirements para COE IA Training - AFP Integra
+# Python 3.11+
+# Esta es la ÚNICA fuente de verdad para dependencias del proyecto
+# ============================================================================
+
+# LLM & Embeddings
+google-cloud-aiplatform>=1.38.0
+google-genai>=0.2.0
+
+# Database
+asyncpg>=0.30.0
+pgvector>=0.3.0
+sqlalchemy>=2.0.0
+
+# API Framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.5.0
+
+# File Processing & RAG
+PyMuPDF>=1.26.0              # PDF processing (alternativa: pdfplumber)
+pdfplumber>=0.10.0           # PDF extraction robusto (recomendado para Agent RAG)
+python-docx>=1.2.0           # DOCX processing
+pandas>=2.3.3
+Pillow>=10.1.0
+
+# Text Processing & Chunking
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# Utils
+python-dotenv>=1.0.0
+requests>=2.31.0
+tenacity>=8.2.0
+
+# Logging & Observability
+structlog>=23.1.0
+
+# Token Counting & Context Limits
+tiktoken>=0.5.0
+
+# Testing & Evaluation
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+
+# Code Quality (desarrollo)
+black>=23.0.0
+ruff>=0.1.0   

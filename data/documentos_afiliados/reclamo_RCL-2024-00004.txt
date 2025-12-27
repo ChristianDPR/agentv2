@@ -1,0 +1,13 @@
+RECLAMO - TICKET RCL-2024-00004
+========================================
+RUT Afiliado: 44.444.444-4
+Nombre: Carmen Soto Díaz
+Tipo: Retraso en pago de cotizaciones
+Prioridad: URGENTE
+Canal: Web
+Fecha: 05/09/2024
+Descripción: Empleador Agrícola del Sur Ltda no ha pagado
+cotizaciones de los últimos 3 meses.
+Monto reclamado: $2.850.000
+Estado: EN REVISIÓN
+Agente asignado: Pedro Soto

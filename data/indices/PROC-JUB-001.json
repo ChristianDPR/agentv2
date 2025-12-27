@@ -1,0 +1,106 @@
+{
+  "document_id": "PROC-JUB-001",
+  "title": "Jubilación por Vejez",
+  "category": "jubilacion",
+  "source_file": "proc-jubilacion-001.pdf",
+  "total_pages": 18,
+  "summary": "**OBJETIVO PRINCIPAL:**\nEl documento describe el procedimiento integral para la jubilación por vejez en AFP Integra, guiando al afiliado desde la solicitud inicial hasta la elección de modalidad de pensión y el primer pago.\n\n**REQUISITOS PRINCIPALES:**\n*   Cumplir la edad legal (Hombres 65, Mujeres 60) o requisitos para anticipada.\n*   Estar afiliado a AFP Integra con saldo en la cuenta de capitalización individual.\n*   Presentar cédula de identidad vigente y documentación específica (certificados de cotizaciones, declaración jurada laboral, etc.).\n*   No tener deudas previsionales o impedimentos legales.\n\n**PROCESO GENERAL (3-4 pasos):**\n1.  **Solicitud y Verificación:** Iniciar el trámite en sucursal, presentando documentos y verificando elegibilidad, cotizaciones y saldo.\n2.  **Evaluación y Oferta:** La AFP evalúa el caso, calcula la pensión y presenta las modalidades disponibles (Retiro Programado, Renta Vitalicia, Renta Temporal).\n3.  **Asesoría y Elección:** El afiliado recibe asesoría previsional obligatoria y selecciona la modalidad de pensión, comparando ofertas de aseguradoras si elige Renta Vitalicia.\n4.  **Tramitación y Pago:** La AFP aprueba la elección, configura los pagos y realiza el primer abono.\n\n**PLAZOS IMPORTANTES:**\nEl proceso total estimado es de 15-25 días hábiles. El primer pago se realiza entre 30-45 días desde la solicitud. Documentos como certificados de cotizaciones tienen una validez de 30 días. La elección de modalidad debe hacerse en 10 días hábiles.",
+  "metadata": {
+    "procedure_code": "PROC-JUB-001",
+    "version": "1.0",
+    "date": "2024-01-15",
+    "indexed_at": "2025-11-24T11:01:55.548600Z"
+  },
+  "sections": [
+    {
+      "section_id": "1",
+      "title": "Sección 1",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "page_range": "1-5",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento de Jubilación por Vejez en AFP Integra.\n\n**PUNTOS CLAVE:**\n1.  **Elegibilidad:** Hombres 65 años, Mujeres 60 años (cumplidos al día de solicitud), con afiliación a AFP y saldo en cuenta.\n2.  **Documentación:** Requiere cédula de identidad vigente, certificados de cotizaciones (últimos 12 meses) y saldo actualizado, declaración jurada de situación laboral, entre otros documentos específicos según el caso.\n3.  **Modalidades de Pensión:** Se ofrecen tres opciones: Retiro Programado (flexible, heredable, monto variable), Renta Vitalicia (fija, vitalicia, no heredable) y Renta Temporal con Renta Vitalicia Diferida (combinación).\n4.  **Proceso de Solicitud:** Inicia en sucursal AFP con revisión de documentos, orientación obligatoria sobre modalidades y simulación de pensión.\n\n**REQUISITOS:** Edad legal cumplida, afiliación a AFP Integra, cotizaciones al día (si trabaja), cuenta de capitalización individual con saldo disponible y sin impedimentos legales.\n\n**PLAZOS:** Certificado de cotizaciones válido 30 días; finiquito laboral no mayor a 60 días; certificado de matrimonio no mayor a 90 días; unificación de fondos (casos especiales) 15-20 días hábiles adicionales.",
+      "keywords": [
+        "días",
+        "saldo",
+        "cotizaciones",
+        "renta",
+        "vitalicia",
+        "integra",
+        "años",
+        "solicitud"
+      ]
+    },
+    {
+      "section_id": "2",
+      "title": "Sección 2",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "page_range": "6-10",
+      "summary": "**TEMA PRINCIPAL:** Proceso de Solicitud y Obtención de Pensión AFP.\n\n**PUNTOS CLAVE:**\n1.  **Evaluación Rigurosa:** Verificación inicial de edad, cotizaciones, saldo y deudas previsionales en 5 días hábiles.\n2.  **Oferta de Modalidades:** Cálculo de pensión y presentación de opciones (Retiro Programado, Renta Vitalicia, Renta Temporal) en 3 días hábiles.\n3.  **Asesoría y Elección Informada:** Asesoría previsional obligatoria y 10 días hábiles para seleccionar la modalidad, requiriendo ofertas de al menos 3 aseguradoras para Renta Vitalicia.\n4.  **Tramitación y Pago:** Aprobación y configuración de pagos en 2-7 días hábiles, con el primer pago el día 10 del mes siguiente.\n\n**REQUISITOS:**\nEdad legal (o pensión ≥ 150% PBS para anticipada), cotizaciones al día, saldo suficiente, sin deudas previsionales. Certificado de asesoría previsional. Para Renta Vitalicia, presentar ofertas de al menos 3 aseguradoras.\n\n**PLAZOS:**\nEvaluación: 5 días hábiles. Subsanar observaciones: 10 días. Cálculo: 3 días hábiles. Elección: 10 días hábiles. Tramitación: 2-7 días hábiles. Primer Pago: Día 10 del mes siguiente a la aprobación.",
+      "keywords": [
+        "días",
+        "hábiles",
+        "renta",
+        "pensión",
+        "vitalicia",
+        "asesoría",
+        "pago",
+        "evaluación"
+      ]
+    },
+    {
+      "section_id": "3",
+      "title": "Sección 3",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "page_range": "11-15",
+      "summary": "**TEMA PRINCIPAL:** Proceso de Jubilación y Gestión de Pensiones en AFP Integra.\n\n**PUNTOS CLAVE:**\n1.  **Beneficios y Opciones:** Se detallan el Aporte Previsional Solidario (APS) y el Bono de Reconocimiento para aumentar la pensión, y las implicaciones de las modalidades (Retiro Programado, Renta Vitalicia).\n2.  **Proceso y Tiempos:** El trámite de jubilación tiene un estimado de 15-25 días hábiles, con el primer pago en 30-45 días desde la solicitud. Se puede seguir el estado online y vía app.\n3.  **Preguntas Frecuentes:** Aclara dudas sobre trabajar jubilado, herencia de la pensión, retiro total de fondos (con excepciones), impuestos y protección de fondos ante quiebra de la AFP.\n4.  **Canales de Atención:** Amplia gama de soporte (web, app, call center, email, presencial) con horarios y tiempos de respuesta definidos para consultas y seguimiento.\n\n**REQUISITOS:**\n*   **APS:** Pensión < $630.000 y pertenecer al 80% más vulnerable.\n*   **Retiro 100% fondos:** Pensión calculada < 1 UF o diagnóstico terminal.\n\n**PLAZOS:**\n*   **Proceso total estimado:** 15-25 días hábiles.\n*   **Primer pago:** 30-45 días desde la solicitud.\n*   **Retractación modalidad:** 10 días hábiles tras la firma.\n*   **Respuesta email:** 24 horas hábiles.",
+      "keywords": [
+        "días",
+        "pensión",
+        "hábiles",
+        "proceso",
+        "retiro",
+        "fondos",
+        "jubilación",
+        "tiempos"
+      ]
+    },
+    {
+      "section_id": "4",
+      "title": "Sección 4",
+      "pages": [
+        16,
+        17,
+        18
+      ],
+      "page_range": "16-18",
+      "summary": "**TEMA PRINCIPAL:** Procedimiento y resolución de problemas frecuentes en la tramitación de pensiones AFP, incluyendo costos y recomendaciones clave.\n\n**PUNTOS CLAVE:**\n1.  **Solución de Errores:** Se detallan soluciones para problemas como edad incorrecta, cotizaciones impagas, documentos vencidos, cuentas bloqueadas judicialmente y rechazo de Renta Vitalicia.\n2.  **Gratuidad y Costos:** El trámite de jubilación y la asesoría previsional son gratuitos. Se especifican otros costos, como certificados adicionales, y se aclara que la comisión de intermediación de Renta Vitalicia no tiene costo directo para el afiliado.\n3.  **Recomendaciones Esenciales:** Se aconseja no pagar a intermediarios, solicitar asesoría previsional, comparar ofertas de Renta Vitalicia (decisión irreversible) y realizar simulaciones ilimitadas.\n4.  **Marco Legal y Contacto:** Se mencionan normativas relevantes y se proporcionan datos de contacto de AFP Integra y la Superintendencia de Pensiones.\n\n**REQUISITOS:**\n*   Cumplir la edad legal.\n*   Presentar documentos actualizados (no más de 30 días).\n*   Regularizar cotizaciones impagas o deudas judiciales (pensión alimenticia).\n\n**PLAZOS:**\n*   Cobranza de cotizaciones: 3-6 meses.\n*   Reenvío de documentación: 10 días.\n*   Desbloqueo de cuenta: 5 días hábiles.",
+      "keywords": [
+        "costos",
+        "cotizaciones",
+        "renta",
+        "vitalicia",
+        "días",
+        "problemas",
+        "pensiones",
+        "recomendaciones"
+      ]
+    }
+  ]
+}

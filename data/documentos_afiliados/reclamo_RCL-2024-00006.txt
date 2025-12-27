@@ -1,0 +1,9 @@
+RECLAMO - TICKET RCL-2024-00006
+========================================
+RUT Afiliado: 66.666.666-6
+Nombre: Patricia Ramírez Herrera
+Tipo: Retraso en pago de cotizaciones
+Prioridad: URGENTE
+Empleador: Retail MegaStore Chile
+Estado: ESCALADO
+Monto afectado: $4.200.000

@@ -1,0 +1,10 @@
+CERTIFICADO DE PENSIÓN
+========================================
+RUT: 77.777.777-7
+Nombre: Diego Navarro Bravo
+Tipo: Vejez Normal
+Modalidad: Retiro Programado
+Monto mensual: $485.000
+Fecha inicio: 01/05/2023
+Estado: ACTIVA
+Beneficiario registrado: Marta Navarro López (cónyuge)

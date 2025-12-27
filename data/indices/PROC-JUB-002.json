@@ -1,0 +1,108 @@
+{
+  "document_id": "PROC-JUB-002",
+  "title": "Jubilación Anticipada",
+  "category": "jubilacion",
+  "source_file": "proc-jubilacion-002.pdf",
+  "total_pages": 20,
+  "summary": "Este documento describe el procedimiento para la Jubilación Anticipada en el sistema AFP, dirigido a afiliados que no han alcanzado la edad legal de jubilación.\n\n**OBJETIVO PRINCIPAL:**\nPermitir la jubilación anticipada a afiliados que demuestren tener un saldo suficiente para financiar una pensión equivalente o superior al 150% de la Pensión Básica Solidaria (PBS), actualmente $321.444/mes.\n\n**REQUISITOS PRINCIPALES:**\n*   Pensión calculada ≥ 150% de la PBS.\n*   Ser menor de la edad legal de jubilación (65H/60M).\n*   No tener deudas previsionales.\n*   Obtener un certificado de asesoría previsional obligatoria y firmar un consentimiento informado.\n\n**PROCESO GENERAL:**\n1.  **Verificación de Viabilidad:** Simulación inicial y evaluación formal por la AFP para confirmar el cumplimiento del requisito de pensión.\n2.  **Asesoría Obligatoria:** Sesión informativa para comprender riesgos, modalidades y consecuencias de la decisión.\n3.  **Decisión Informada:** Período de reflexión y firma de consentimiento, eligiendo la modalidad de pensión (Retiro Programado, Renta Vitalicia o mixta).\n4.  **Tramitación y Pago:** La AFP procesa la solicitud para el primer pago.\n\n**PLAZOS IMPORTANTES:**\nEl proceso completo puede durar 20-30 días hábiles, incluyendo un período de reflexión de hasta 15 días hábiles. El primer pago se realiza el día 10 del mes siguiente a la aprobación. La decisión es irreversible y puede reducir significativamente la pensión.",
+  "metadata": {
+    "procedure_code": "PROC-JUB-002",
+    "version": "1.0",
+    "date": "2024-01-15",
+    "indexed_at": "2025-11-24T11:02:47.726088Z"
+  },
+  "sections": [
+    {
+      "section_id": "1",
+      "title": "Sección 1",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "page_range": "1-5",
+      "summary": "**TEMA PRINCIPAL:**\nProcedimiento para la Jubilación Anticipada en el sistema AFP, dirigido a afiliados que no han alcanzado la edad legal de jubilación pero cumplen requisitos de saldo y pensión.\n\n**PUNTOS CLAVE:**\n1.  **Elegibilidad Financiera:** La pensión calculada debe ser al menos el 150% de la Pensión Básica Solidaria (PBS), equivalente a $321.444/mes en 2024, lo que implica un saldo considerable.\n2.  **Edad y Saldo:** Aunque no hay edad mínima legal, se recomienda no jubilar antes de 55 (H) / 50 (M) años, ya que a menor edad, mayor saldo es necesario para cumplir el requisito.\n3.  **Modalidades y Riesgos:** El Retiro Programado es flexible pero la pensión disminuye y los fondos pueden agotarse. La Renta Vitalicia es más cara anticipadamente. La opción \"Renta Temporal + Vitalicia\" es una estrategia intermedia recomendada.\n4.  **Asesoría Obligatoria:** Se exige un certificado de asesoría previsional y la firma de un consentimiento informado reconociendo los riesgos e irreversibilidad.\n\n**REQUISITOS:**\n*   **Edad:** Menor a la legal (65H/60M).\n*   **Pensión:** Calculada debe ser ≥ 150% PBS ($321.444/mes).\n*   **Otros:** No deudas previsionales, no impedimentos legales, certificado de asesoría previsional, declaración de beneficiarios.\n*   **Documentos:** Cédula, RUT, certificado de saldo actualizado, cotizaciones, documentos de beneficiarios, declaración jurada, consentimiento informado.\n\n**PLAZOS:**\n*   Certificado de saldo: No mayor a 30 días de antigüedad.\n*   Certificado de asesoría previsional: Válido por 90 días.",
+      "keywords": [
+        "saldo",
+        "edad",
+        "pensión",
+        "certificado",
+        "asesoría",
+        "legal",
+        "previsional",
+        "jubilación"
+      ]
+    },
+    {
+      "section_id": "2",
+      "title": "Sección 2",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "page_range": "6-10",
+      "summary": "**TEMA PRINCIPAL:** Proceso para solicitar y evaluar la viabilidad de la Jubilación Anticipada en una AFP.\n\n**PUNTOS CLAVE:**\n1.  **Simulación Inicial:** Permite al afiliado verificar la viabilidad de su jubilación anticipada, con resultados de \"viable\" o \"no viable\" y estimaciones de pensión.\n2.  **Evaluación Formal:** Si es viable, la AFP realiza una validación exhaustiva de saldos, cálculo actuarial y requisitos legales (ej. 150% PBS, sin deudas).\n3.  **Asesoría Previsional Obligatoria:** Sesión de 1 hora para informar sobre riesgos, comparar escenarios de pensión (anticipada vs. normal) y entregar un certificado.\n4.  **Período de Reflexión:** 15 días hábiles para tomar una decisión informada, culminando con la firma de un Consentimiento Informado.\n\n**REQUISITOS:**\n*   **Simulación:** RUT, clave web, edad, cónyuge/hijos.\n*   **Evaluación Formal:** Cumplir 150% PBS, cotizaciones al día, sin deudas previsionales ni retenciones judiciales.\n*   **Asesoría:** Asistir a la sesión obligatoria y obtener certificado.\n*   **Confirmación:** Firmar Consentimiento Informado.\n\n**PLAZOS:**\n*   **Simulación:** Inmediato (web/app) o 24 horas.\n*   **Evaluación Formal:** 3 días hábiles.\n*   **Certificado Asesoría:** Válido por 90 días.\n*   **Período de Reflexión:** 15 días hábiles.",
+      "keywords": [
+        "días",
+        "anticipada",
+        "simulación",
+        "viable",
+        "evaluación",
+        "formal",
+        "asesoría",
+        "certificado"
+      ]
+    },
+    {
+      "section_id": "3",
+      "title": "Sección 3",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "page_range": "11-15",
+      "summary": "**TEMA PRINCIPAL:** Impacto, riesgos y alternativas de la Jubilación Anticipada en el sistema AFP.\n\n**PUNTOS CLAVE:**\n1.  La jubilación anticipada reduce significativamente la pensión y es una decisión voluntaria, informada e irreversible.\n2.  Implica riesgos como el agotamiento de fondos por longevidad (Retiro Programado) y la vulnerabilidad a crisis de mercado.\n3.  Se debe elegir una modalidad de pensión (Retiro Programado, Renta Vitalicia o Renta Temporal).\n4.  Alternativas como el APV, postergar la jubilación unos años o trabajar part-time pueden aumentar sustancialmente la pensión futura.\n\n**REQUISITOS:**\nAceptar una pensión menor, el riesgo de agotar fondos y que la decisión es voluntaria e informada. Elegir una modalidad de pensión.\n\n**PLAZOS:**\n15 días hábiles para elegir modalidad tras asesoría (si no, se cancela). 10 días hábiles para tramitación interna AFP. Primer pago el día 10 del mes siguiente a la aprobación.",
+      "keywords": [
+        "pensión",
+        "jubilación",
+        "elegir",
+        "modalidad",
+        "riesgos",
+        "alternativas",
+        "anticipada",
+        "decisión"
+      ]
+    },
+    {
+      "section_id": "4",
+      "title": "Sección 4",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "page_range": "16-20",
+      "summary": "**TEMA PRINCIPAL:** Proceso, requisitos y consideraciones fundamentales para la Jubilación Anticipada en una AFP.\n\n**PUNTOS CLAVE:**\n1.  **Elegibilidad y Conveniencia:** Recomendada para afiliados con saldos muy altos ($150MM+), por razones de salud o emprendimiento. No se aconseja para saldos justos o sin un plan definido.\n2.  **Requisito de Pensión Mínima:** No basta con un saldo elevado; la pensión calculada debe ser igual o superior a $321.444/mes (150% de la Pensión Básica Solidaria).\n3.  **Decisión Irreversible y Asesoría:** La jubilación anticipada es irreversible (salvo cambio de Retiro Programado a Renta Vitalicia). La asesoría obligatoria es crucial, con un 38.7% de afiliados retractándose tras ella.\n4.  **Trabajo Post-Jubilación:** Es posible trabajar después de jubilar anticipadamente, pero el impacto en la pensión varía según la modalidad elegida (Retiro Programado o Renta Vitalicia).\n\n**REQUISITOS:**\n*   Pensión calculada ≥ $321.444/mes.\n*   Asistencia obligatoria a sesión de asesoría.\n*   Se consideran todos los saldos previsionales (obligatorio, APV, Cuenta 2, Bonos).\n\n**PLAZOS:**\n*   Proceso total estimado: 20-30 días hábiles.\n*   Período de reflexión: Hasta 15 días hábiles (opcional).\n*   Primer pago: Día 10 del mes siguiente a la aprobación.",
+      "keywords": [
+        "pensión",
+        "jubilación",
+        "saldos",
+        "asesoría",
+        "proceso",
+        "requisitos",
+        "anticipada",
+        "afiliados"
+      ]
+    }
+  ]
+}

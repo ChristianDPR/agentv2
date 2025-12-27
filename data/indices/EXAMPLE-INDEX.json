@@ -1,0 +1,40 @@
+{
+  "document_id": "PROC-JUB-001",
+  "title": "Jubilación por Vejez",
+  "category": "jubilacion",
+  "source_file": "proc-jubilacion-001.pdf",
+  "total_pages": 15,
+  "summary": "Este documento describe el procedimiento completo para solicitar jubilación por vejez en AFP Integra. Los requisitos principales incluyen: tener 60 años (mujeres) o 65 años (hombres), estar afiliado al sistema de AFP, y cumplir con al menos 20 años de cotizaciones. El proceso involucra la presentación de documentos específicos como cédula de identidad, certificado de cotizaciones, y formulario de solicitud. El trámite tiene un plazo de respuesta de 30 días hábiles desde la recepción completa de antecedentes. El documento detalla cada paso del proceso, desde la recopilación de documentos hasta la resolución final y el inicio del pago de pensión.",
+  "metadata": {
+    "procedure_code": "PROC-JUB-001",
+    "version": "1.0",
+    "date": "2024-01-15",
+    "indexed_at": "2024-11-24T10:30:00Z"
+  },
+  "sections": [
+    {
+      "section_id": "1",
+      "title": "Sección 1",
+      "pages": [1, 2, 3, 4, 5],
+      "page_range": "1-5",
+      "summary": "Esta sección establece el marco legal del procedimiento de jubilación por vejez, incluyendo las referencias al DL 3.500 y Ley 20.255. Se detallan los requisitos de edad mínima (60 años mujeres, 65 años hombres) y el requisito de cotizaciones mínimas de 20 años. También se explica el concepto de pensión autofinanciada y las modalidades disponibles: retiro programado, renta vitalicia, y retiro programado con renta vitalicia diferida. Se especifican los derechos del afiliado y las obligaciones de la AFP en este proceso.",
+      "keywords": ["jubilación", "requisitos", "edad", "cotizaciones", "legal", "DL-3500", "pensión", "afiliado"]
+    },
+    {
+      "section_id": "2",
+      "title": "Sección 2",
+      "pages": [6, 7, 8, 9, 10],
+      "page_range": "6-10",
+      "summary": "Esta sección describe en detalle el proceso de solicitud paso a paso. Primero, el afiliado debe solicitar el certificado de saldo y proyección de pensión a través de la página web o sucursal. Segundo, debe comparar las ofertas de diferentes modalidades de pensión. Tercero, completar el formulario de solicitud de pensión (Formulario 004). Cuarto, presentar documentación requerida: cédula de identidad vigente, certificado de nacimiento, certificado de matrimonio (si aplica), y certificado de cotizaciones. El proceso de evaluación toma hasta 10 días hábiles, durante los cuales la AFP verifica la completitud de antecedentes.",
+      "keywords": ["solicitud", "formulario", "documentos", "certificado", "proceso", "evaluación", "plazo", "presentación"]
+    },
+    {
+      "section_id": "3",
+      "title": "Sección 3",
+      "pages": [11, 12, 13, 14, 15],
+      "page_range": "11-15",
+      "summary": "Esta sección final cubre la resolución del trámite y el inicio del pago de pensión. Una vez aprobada la solicitud, se emite una resolución que especifica el monto de pensión, modalidad elegida, y fecha de inicio de pago. El primer pago se realiza dentro de 10 días hábiles posteriores a la resolución. Se explican los recursos disponibles en caso de rechazo: apelación ante la Superintendencia de Pensiones en un plazo de 30 días. También se detallan los casos especiales como pensión anticipada (antes de la edad legal) y las condiciones adicionales requeridas. Finalmente, se incluye información de contacto para consultas y el procedimiento de seguimiento del estado de la solicitud.",
+      "keywords": ["resolución", "pago", "pensión", "apelación", "rechazo", "seguimiento", "contacto", "anticipada"]
+    }
+  ]
+}

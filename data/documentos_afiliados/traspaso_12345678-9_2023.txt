@@ -1,0 +1,11 @@
+SOLICITUD DE TRASPASO
+========================================
+Número: TRP-2023-00156
+RUT: 12.345.678-9
+Nombre: Juan Pérez González
+AFP Origen: AFP Habitat
+AFP Destino: AFP Capital
+Monto trasladado: $46.500.000
+Fecha solicitud: 15/06/2023
+Fecha ejecución: 20/07/2023
+Estado: COMPLETADO

@@ -1,0 +1,6 @@
+Solicitud de traspaso
+RUT: 11.111.111-1
+Origen: AFP Modelo
+Destino: AFP PlanVital
+Monto: $4.200.000
+Estado: En Proceso

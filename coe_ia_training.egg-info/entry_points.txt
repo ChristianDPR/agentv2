@@ -1,0 +1,2 @@
+[console_scripts]
+coe-api = src.api.main:main

@@ -1,0 +1,335 @@
+{
+  "version": "1.0",
+  "description": "Golden set para evaluación del Agente de Reclamos AFP",
+  "created_at": "2025-11-25",
+  "total_cases": 20,
+  "acceptance_criteria": {
+    "category_accuracy": 0.85,
+    "priority_accuracy": 0.80,
+    "routing_accuracy": 1.0,
+    "critical_cases_pass_rate": 1.0,
+    "latency_p95_seconds": 3.0
+  },
+  "cases": [
+    {
+      "id": "GS-REC-001",
+      "description": "Fraude - cargo no autorizado urgente",
+      "input": {
+        "text": "Detecté un cargo de S/500 en mi cuenta que no reconozco. No he realizado ninguna compra. Necesito bloquear mi cuenta urgente porque alguien está usando mis datos.",
+        "channel": "app"
+      },
+      "expected": {
+        "category": "fraude",
+        "priority": "critical",
+        "sla_hours": 4,
+        "department": "seguridad",
+        "escalated": true
+      },
+      "tags": ["fraude", "urgente", "critico", "bloqueo"]
+    },
+    {
+      "id": "GS-REC-002",
+      "description": "Operaciones - estado de cuenta faltante",
+      "input": {
+        "text": "No he recibido mi estado de cuenta de los últimos 2 meses. Antes me llegaba puntualmente al correo pero ya no.",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "operaciones",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "operaciones",
+        "escalated": false
+      },
+      "tags": ["operaciones", "estado_cuenta"]
+    },
+    {
+      "id": "GS-REC-003",
+      "description": "Legal - amenaza de demanda",
+      "input": {
+        "text": "Voy a demandar a la AFP por el mal manejo de mis fondos. Mi abogado ya está preparando la carta notarial. Exijo una respuesta inmediata.",
+        "channel": "presencial"
+      },
+      "expected": {
+        "category": "legal",
+        "priority": "high",
+        "sla_hours": 24,
+        "department": "legal",
+        "escalated": true
+      },
+      "tags": ["legal", "demanda", "urgente"]
+    },
+    {
+      "id": "GS-REC-004",
+      "description": "Aportes - descuento incorrecto",
+      "input": {
+        "text": "Mi empleador me está descontando de más en la planilla. El porcentaje no coincide con lo que debería ser según mi sueldo.",
+        "channel": "call_center"
+      },
+      "expected": {
+        "category": "aportes",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "operaciones",
+        "escalated": false
+      },
+      "tags": ["aportes", "descuento", "planilla"]
+    },
+    {
+      "id": "GS-REC-005",
+      "description": "Jubilación - consulta trámite",
+      "input": {
+        "text": "Quiero saber qué documentos necesito para iniciar mi trámite de jubilación. Cumplo 65 años el próximo mes.",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "jubilacion",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "pensiones",
+        "escalated": false
+      },
+      "tags": ["jubilacion", "documentos", "consulta"]
+    },
+    {
+      "id": "GS-REC-006",
+      "description": "TI - app no funciona",
+      "input": {
+        "text": "La aplicación no me deja ingresar. Pongo mi contraseña correcta pero dice que es incorrecta. Ya intenté varias veces.",
+        "channel": "app"
+      },
+      "expected": {
+        "category": "ti",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "soporte_tecnico",
+        "escalated": false
+      },
+      "tags": ["ti", "app", "acceso", "contraseña"]
+    },
+    {
+      "id": "GS-REC-007",
+      "description": "Atención - queja por servicio",
+      "input": {
+        "text": "La atención en la agencia de Miraflores fue pésima. Me hicieron esperar 2 horas y el ejecutivo fue muy grosero conmigo.",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "atencion",
+        "priority": "low",
+        "sla_hours": 168,
+        "department": "servicio_cliente",
+        "escalated": false
+      },
+      "tags": ["atencion", "queja", "servicio"]
+    },
+    {
+      "id": "GS-REC-008",
+      "description": "Traspasos - cambio de AFP",
+      "input": {
+        "text": "Quiero cambiarme de AFP Integra a otra administradora. ¿Cuál es el procedimiento y cuánto demora?",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "traspasos",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "traspasos",
+        "escalated": false
+      },
+      "tags": ["traspasos", "cambio", "consulta"]
+    },
+    {
+      "id": "GS-REC-009",
+      "description": "Fraude - suplantación de identidad",
+      "input": {
+        "text": "Alguien abrió una cuenta a mi nombre sin mi autorización. Nunca me afilié a esta AFP. Esto es suplantación de identidad.",
+        "channel": "presencial"
+      },
+      "expected": {
+        "category": "fraude",
+        "priority": "critical",
+        "sla_hours": 4,
+        "department": "seguridad",
+        "escalated": true
+      },
+      "tags": ["fraude", "suplantacion", "critico"]
+    },
+    {
+      "id": "GS-REC-010",
+      "description": "Aportes - aporte no registrado",
+      "input": {
+        "text": "Mi aporte de octubre no aparece en mi estado de cuenta. Mi empleador me confirmó que sí lo depositó.",
+        "channel": "app"
+      },
+      "expected": {
+        "category": "aportes",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "operaciones",
+        "escalated": false
+      },
+      "tags": ["aportes", "faltante", "deposito"]
+    },
+    {
+      "id": "GS-REC-011",
+      "description": "Legal - denuncia ante SBS",
+      "input": {
+        "text": "Ya presenté mi denuncia ante la SBS. Exijo que se me informe el estado de mi caso y las acciones que están tomando.",
+        "channel": "email"
+      },
+      "expected": {
+        "category": "legal",
+        "priority": "high",
+        "sla_hours": 24,
+        "department": "legal",
+        "escalated": true
+      },
+      "tags": ["legal", "sbs", "denuncia"]
+    },
+    {
+      "id": "GS-REC-012",
+      "description": "Jubilación - pensión de invalidez",
+      "input": {
+        "text": "Tuve un accidente y necesito solicitar pensión por invalidez. Tengo todos los certificados médicos.",
+        "channel": "presencial"
+      },
+      "expected": {
+        "category": "jubilacion",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "pensiones",
+        "escalated": false
+      },
+      "tags": ["jubilacion", "invalidez", "pension"]
+    },
+    {
+      "id": "GS-REC-013",
+      "description": "TI - token no funciona",
+      "input": {
+        "text": "El token de seguridad que me dieron no genera códigos. La pantalla está en blanco.",
+        "channel": "call_center"
+      },
+      "expected": {
+        "category": "ti",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "soporte_tecnico",
+        "escalated": false
+      },
+      "tags": ["ti", "token", "dispositivo"]
+    },
+    {
+      "id": "GS-REC-014",
+      "description": "Fraude crítico - vaciado de cuenta",
+      "input": {
+        "text": "URGENTE: Acabo de ver que retiraron todo mi fondo de pensiones sin mi autorización. Son más de S/50,000. Esto es un robo.",
+        "channel": "call_center"
+      },
+      "expected": {
+        "category": "fraude",
+        "priority": "critical",
+        "sla_hours": 4,
+        "department": "seguridad",
+        "escalated": true
+      },
+      "tags": ["fraude", "critico", "urgente", "retiro"]
+    },
+    {
+      "id": "GS-REC-015",
+      "description": "Operaciones - consulta de saldo",
+      "input": {
+        "text": "Quisiera saber cuál es mi saldo actual y el detalle de mis últimos movimientos.",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "operaciones",
+        "priority": "low",
+        "sla_hours": 168,
+        "department": "operaciones",
+        "escalated": false
+      },
+      "tags": ["operaciones", "consulta", "saldo"]
+    },
+    {
+      "id": "GS-REC-016",
+      "description": "Aportes - empleador moroso",
+      "input": {
+        "text": "Mi ex empleador no depositó mis aportes de los últimos 6 meses antes de despedirme. La empresa se llama XYZ SAC.",
+        "channel": "presencial"
+      },
+      "expected": {
+        "category": "aportes",
+        "priority": "high",
+        "sla_hours": 24,
+        "department": "operaciones",
+        "escalated": false
+      },
+      "tags": ["aportes", "moroso", "empleador"]
+    },
+    {
+      "id": "GS-REC-017",
+      "description": "Atención - demora en respuesta",
+      "input": {
+        "text": "Hace un mes envié un reclamo y nadie me ha respondido. Es inaceptable este nivel de servicio.",
+        "channel": "web"
+      },
+      "expected": {
+        "category": "atencion",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "servicio_cliente",
+        "escalated": false
+      },
+      "tags": ["atencion", "demora", "seguimiento"]
+    },
+    {
+      "id": "GS-REC-018",
+      "description": "Traspasos - demora en proceso",
+      "input": {
+        "text": "Inicié mi traspaso hace 3 meses y todavía no se completa. La otra AFP dice que ustedes no envían la información.",
+        "channel": "call_center"
+      },
+      "expected": {
+        "category": "traspasos",
+        "priority": "high",
+        "sla_hours": 24,
+        "department": "traspasos",
+        "escalated": false
+      },
+      "tags": ["traspasos", "demora", "urgente"]
+    },
+    {
+      "id": "GS-REC-019",
+      "description": "Legal - INDECOPI",
+      "input": {
+        "text": "Voy a presentar una queja ante INDECOPI si no solucionan mi problema en las próximas 48 horas.",
+        "channel": "email"
+      },
+      "expected": {
+        "category": "legal",
+        "priority": "high",
+        "sla_hours": 24,
+        "department": "legal",
+        "escalated": true
+      },
+      "tags": ["legal", "indecopi", "amenaza"]
+    },
+    {
+      "id": "GS-REC-020",
+      "description": "Jubilación anticipada - consulta requisitos",
+      "input": {
+        "text": "Tengo 55 años y quiero saber si puedo acceder a jubilación anticipada. ¿Cuáles son los requisitos?",
+        "channel": "app"
+      },
+      "expected": {
+        "category": "jubilacion",
+        "priority": "normal",
+        "sla_hours": 72,
+        "department": "pensiones",
+        "escalated": false
+      },
+      "tags": ["jubilacion", "anticipada", "requisitos"]
+    }
+  ]
+}
