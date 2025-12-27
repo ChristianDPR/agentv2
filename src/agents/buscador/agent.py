@@ -11,7 +11,10 @@ PEDAGOGÍA:
 - Fusión de evidencias de múltiples fuentes
 """
 
+from pathlib import Path
 from typing import Dict, Any, List, Optional
+
+from google.cloud import bigquery
 
 from src.framework.base_agent import BaseAgent, AgentResponse
 from src.framework.model_provider import ModelProvider
@@ -38,7 +41,7 @@ class AgenteBuscador(BaseAgent):
     def __init__(
         self,
         model_provider: ModelProvider,
-        sql_tool: SQLQueryTool,
+        sql_tool: BigQuerySQLQueryTool,
         list_docs_tool: ListDocumentsTool,
         read_doc_tool: ReadDocumentTool,
         finish_tool: FinishTool
@@ -46,7 +49,7 @@ class AgenteBuscador(BaseAgent):
         """
         Args:
             model_provider: Proveedor de LLM con function calling
-            sql_tool: Tool para consultas SQL
+            sql_tool: Tool para consultas SQL en BigQuery
             list_docs_tool: Tool para listar documentos (como ls/tree)
             read_doc_tool: Tool para leer contenido de documentos
             finish_tool: Tool para terminar el loop
@@ -389,3 +392,36 @@ Paso {obs['step']}:
                 "error": "max_iterations_reached"
             }
         )
+
+
+def create_agente_buscador_bigquery(
+    model_provider: ModelProvider,
+    documents_path: str | Path,
+    bigquery_project: str | None = None,
+    default_dataset: str | None = None
+) -> AgenteBuscador:
+    """
+    Crea un AgenteBuscador configurado para BigQuery.
+
+    Args:
+        model_provider: Proveedor de LLM con function calling.
+        documents_path: Ruta base para documentos locales.
+        bigquery_project: Proyecto de BigQuery (opcional).
+        default_dataset: Dataset por defecto para consultas (opcional).
+    """
+    bq_client = bigquery.Client(project=bigquery_project)
+    sql_tool = BigQuerySQLQueryTool(
+        bq_client=bq_client,
+        default_dataset=default_dataset
+    )
+    list_docs_tool = ListDocumentsTool(base_path=documents_path)
+    read_doc_tool = ReadDocumentTool(base_path=documents_path)
+    finish_tool = FinishTool()
+
+    return AgenteBuscador(
+        model_provider=model_provider,
+        sql_tool=sql_tool,
+        list_docs_tool=list_docs_tool,
+        read_doc_tool=read_doc_tool,
+        finish_tool=finish_tool
+    )
