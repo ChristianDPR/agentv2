@@ -86,6 +86,7 @@ class BigQuerySQLQueryTool(Tool):
     async def execute(self, query: str) -> Dict[str, Any]:
         # Normalizar RUTs
         query = self._normalize_ruts_in_query(query)
+        query = query.strip().rstrip(";")
 
         # Validar SQL
         is_safe, error = self.validator.validate(query)
