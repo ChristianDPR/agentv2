@@ -74,11 +74,11 @@ ALLOWED_COLUMNS: Dict[str, List[str]] = {
 # =============================================================================
 
 ALLOWED_TABLES: Set[str] = {
-    "temp_fprod_trs"
+    "tmp_fprod_trs"
 }
 
 ALLOWED_COLUMNS: Dict[str, List[str]] = {
-    "temp_fprod_trs": [
+    "tmp_fprod_trs": [
         # Fecha
         "fecha",
 

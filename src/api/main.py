@@ -39,7 +39,7 @@ from fastapi.exceptions import RequestValidationError
 import structlog
 import time
 
-from src.api.routes import asistente
+from src.api.routes import asistente, buscador
 from src.api.models import HealthResponse
 
 
@@ -217,9 +217,8 @@ app.include_router(asistente.router, prefix="/api/v1")
 # from src.api.routes import reclamos
 # app.include_router(reclamos.router, prefix="/api/v1")
 
-# TODO: Prototipo 3: Agente Buscador (Lab Día 3)
-# from src.api.routes import buscador
-# app.include_router(buscador.router, prefix="/api/v1")
+# Prototipo 3: Agente Buscador (Lab Día 3)
+app.include_router(buscador.router, prefix="/api/v1")
 
 
 # ============================================================================
@@ -243,7 +242,7 @@ async def root():
         "prototipos": {
             "asistente": "/api/v1/asistente",
             "reclamos": "/api/v1/reclamos (TODO)",
-            "buscador": "/api/v1/buscador (TODO)"
+            "buscador": "/api/v1/buscador"
         }
     }
 
