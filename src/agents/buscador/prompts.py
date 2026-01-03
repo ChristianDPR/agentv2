@@ -3,17 +3,17 @@ DATABASE_CONTEXT = """
 
 La información está consolidada en UNA tabla:
 
-- Tabla: `temp_fprod_trs`
+- Tabla: `tmp_fprod_trs`
 - Dataset/Proyecto (recomendado usar nombre completo):
-  `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+  `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 
 ### Resolución de dataset/proyecto (importante)
 - En ejecución, existe un dataset por defecto configurado vía variable de entorno:
   `BIGQUERY_DEFAULT_DATASET = rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro`
 - Por eso, SIEMPRE intenta primero consultas usando solo:
-  `FROM temp_fprod_trs`
+  `FROM tmp_fprod_trs`
 - Si la ejecución devuelve error por dataset no resuelto, usa nombre completo:
-  `FROM \`rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs\``
+  `FROM \`rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs\``
 
 Cada fila representa un registro de traspaso/productividad (fprod_trs).
 
@@ -50,7 +50,7 @@ Cada fila representa un registro de traspaso/productividad (fprod_trs).
 
 ### Notas importantes
 
-- NO existen tablas como afiliados/aportes/reclamos/etc. Todo está en `temp_fprod_trs`.
+- NO existen tablas como afiliados/aportes/reclamos/etc. Todo está en `tmp_fprod_trs`.
 - Evita JOINs: trabaja con filtros, agregaciones y agrupaciones sobre la tabla.
 - Si filtras por fecha y no estás seguro del tipo, prueba:
   - `WHERE fecha BETWEEN 'YYYY-MM-DD' AND 'YYYY-MM-DD'`
@@ -116,7 +116,7 @@ paso del plan usando las tools disponibles.
 1. Ejecuta UN solo paso del plan por iteración
 2. Usa los resultados anteriores para informar tu decisión
 3. Si encuentras la información suficiente, usa "finish"
-4. Si un resultado está vacío, ajusta filtros (fecha, canal, zona, asesor, cliente, empleador) o prueba agregaciones/agrupaciones; no intentes otras tablas (solo existe temp_fprod_trs).
+4. Si un resultado está vacío, ajusta filtros (fecha, canal, zona, asesor, cliente, empleador) o prueba agregaciones/agrupaciones; no intentes otras tablas (solo existe tmp_fprod_trs).
 5. Escribe queries SQL válidas usando las columnas correctas del schema
 6. - Si hay error por tipo de `fecha`, prueba:
   - WHERE fecha BETWEEN 'YYYY-MM-DD' AND 'YYYY-MM-DD'
@@ -129,11 +129,11 @@ paso del plan usando las tools disponibles.
 ```sql
 -- Conteo total de registros
 SELECT COUNT(*) AS total
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`;
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`;
 
 -- Filtrar por rango de fechas (ajusta según tipo de columna fecha)
 SELECT *
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 WHERE fecha BETWEEN '2024-10-01' AND '2024-10-31'
 LIMIT 100;
 
@@ -142,7 +142,7 @@ SELECT
   canal,
   zona_asesor,
   COUNT(*) AS traspasos
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 GROUP BY canal, zona_asesor
 ORDER BY traspasos DESC
 LIMIT 50;
@@ -154,14 +154,14 @@ SELECT
   apellido_paterno_asesor,
   COUNT(*) AS traspasos,
   AVG(remuneracion) AS remuneracion_promedio
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 GROUP BY codigo_asesor, primer_nombre_asesor, apellido_paterno_asesor
 ORDER BY traspasos DESC
 LIMIT 20;
 
 -- Búsqueda por cliente (CUSPP o documento)
 SELECT *
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 WHERE cuspp = 'XXXXXXXXXXXX'
    OR numerp_documento_cliente = 'XXXXXXXX'
 LIMIT 100;
@@ -172,7 +172,7 @@ SELECT
   razon_social_empleador,
   COUNT(*) AS traspasos,
   AVG(remuneracion) AS remuneracion_promedio
-FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.temp_fprod_trs`
+FROM `rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 GROUP BY ruc_empleador, razon_social_empleador
 ORDER BY traspasos DESC
 LIMIT 50;
