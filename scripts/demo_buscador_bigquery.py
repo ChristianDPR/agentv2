@@ -12,6 +12,7 @@ import asyncio
 import os
 import sys
 from pathlib import Path
+from typing import Any, Iterable, Tuple
 
 from dotenv import load_dotenv
 
@@ -104,6 +105,84 @@ def print_observation(output: dict, verbose: bool = True):
         print(f"  {output}")
 
 
+async def _select_chart_type(
+    model_provider,
+    query: str,
+    label_field: str,
+    value_field: str
+) -> str:
+    prompt = (
+        "Elige el mejor tipo de gráfico para representar el resultado.\n"
+        f"Pregunta: {query}\n"
+        f"Etiqueta: {label_field}\n"
+        f"Valor: {value_field}\n"
+        "Opciones válidas: bar, line, pie.\n"
+        "Responde solo con una palabra de la lista."
+    )
+    choice = await model_provider.generate(prompt)
+    if isinstance(choice, dict):
+        choice = ""
+    if not isinstance(choice, str):
+        return "bar"
+    choice = choice.strip().lower()
+    return choice if choice in {"bar", "line", "pie"} else "bar"
+
+
+def _infer_chart_fields(rows: list[dict[str, Any]]) -> Tuple[str, str]:
+    first = rows[0]
+    numeric_keys = [k for k, v in first.items() if isinstance(v, (int, float))]
+    non_numeric_keys = [k for k, v in first.items() if not isinstance(v, (int, float))]
+    value_field = numeric_keys[0] if numeric_keys else list(first.keys())[0]
+    label_field = non_numeric_keys[0] if non_numeric_keys else list(first.keys())[0]
+    return label_field, value_field
+
+
+def _render_ascii_bar(labels: Iterable[str], values: Iterable[float]) -> None:
+    print_section("Gráfico (terminal)")
+    max_value = max(values) if values else 0
+    scale = 40 / max_value if max_value else 1
+    for label, value in zip(labels, values):
+        bar = "█" * max(1, int(value * scale))
+        print(f"{label:20} | {bar} {value:,.2f}")
+
+
+def _render_png_chart(chart_type: str, labels: list[str], values: list[float]) -> str | None:
+    try:
+        import matplotlib.pyplot as plt
+    except Exception:
+        print_warning("matplotlib no está disponible; omitiendo gráfico PNG.")
+        return None
+
+    plots_dir = WORKSPACE_ROOT / "data" / "plots"
+    plots_dir.mkdir(parents=True, exist_ok=True)
+    output_path = plots_dir / "buscador_chart.png"
+
+    plt.figure(figsize=(10, 6))
+    if chart_type == "pie":
+        plt.pie(values, labels=labels, autopct="%1.1f%%")
+    elif chart_type == "line":
+        plt.plot(labels, values, marker="o")
+        plt.xticks(rotation=45, ha="right")
+    else:
+        plt.bar(labels, values)
+        plt.xticks(rotation=45, ha="right")
+
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+    return str(output_path)
+
+
+def _extract_sql_results(metadata: dict) -> list[dict[str, Any]]:
+    observations = metadata.get("observations", [])
+    for obs in reversed(observations):
+        if obs.get("tool") == "sql_query":
+            output = obs.get("output", {})
+            if isinstance(output, dict) and output.get("results"):
+                return output["results"]
+    return []
+
+
 def _ensure_bigquery_credentials() -> bool:
     credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
     if credentials_path and not Path(credentials_path).exists():
@@ -193,7 +272,7 @@ async def initialize_components():
     registered = model_provider.get_registered_tools()
     print_info(f"Tools registradas en ModelProvider: {list(registered.keys())}")
 
-    return {"agente": agente}
+    return {"agente": agente, "model_provider": model_provider}
 
 
 async def run_demo():
@@ -203,6 +282,7 @@ async def run_demo():
         return
 
     agente = components["agente"]
+    model_provider = components["model_provider"]
 
     while True:
         query = input("\nConsulta (o 'salir'): ").strip()
@@ -217,6 +297,25 @@ async def run_demo():
 
         print_success("Respuesta final:")
         print(response.content)
+
+        results = _extract_sql_results(response.metadata)
+        if results:
+            label_field, value_field = _infer_chart_fields(results)
+            chart_type = await _select_chart_type(
+                model_provider=model_provider,
+                query=query,
+                label_field=label_field,
+                value_field=value_field
+            )
+            labels = [str(row.get(label_field, ""))[:20] for row in results[:10]]
+            values = [
+                float(row.get(value_field, 0) or 0)
+                for row in results[:10]
+            ]
+            _render_ascii_bar(labels, values)
+            png_path = _render_png_chart(chart_type, labels, values)
+            if png_path:
+                print_info(f"PNG generado: {png_path}")
 
         if response.metadata.get("observations"):
             print_section("Observaciones")
