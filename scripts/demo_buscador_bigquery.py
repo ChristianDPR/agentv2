@@ -129,7 +129,37 @@ def _create_sample_documents(docs_path: Path):
 async def initialize_components():
     """Inicializa el agente buscador con BigQuery"""
     from src.framework.model_provider import VertexAIProvider
-    from src.agents.buscador.agent import create_agente_buscador_bigquery
+    try:
+        from src.agents.buscador.agent import create_agente_buscador_bigquery
+    except ImportError:
+        from google.cloud import bigquery
+        from src.tools.bigquery_query_tool import BigQuerySQLQueryTool
+        from src.tools.document_search_tool import ListDocumentsTool, ReadDocumentTool
+        from src.tools.finish_tool import FinishTool
+        from src.agents.buscador.agent import AgenteBuscador
+
+        def create_agente_buscador_bigquery(
+            model_provider: VertexAIProvider,
+            documents_path: str | Path,
+            bigquery_project: str | None = None,
+            default_dataset: str | None = None
+        ) -> AgenteBuscador:
+            bq_client = bigquery.Client(project=bigquery_project)
+            sql_tool = BigQuerySQLQueryTool(
+                bq_client=bq_client,
+                default_dataset=default_dataset
+            )
+            list_docs_tool = ListDocumentsTool(base_path=documents_path)
+            read_doc_tool = ReadDocumentTool(base_path=documents_path)
+            finish_tool = FinishTool()
+
+            return AgenteBuscador(
+                model_provider=model_provider,
+                sql_tool=sql_tool,
+                list_docs_tool=list_docs_tool,
+                read_doc_tool=read_doc_tool,
+                finish_tool=finish_tool
+            )
 
     print_section("Inicializando componentes")
 
