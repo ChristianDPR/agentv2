@@ -129,7 +129,7 @@ def _create_sample_documents(docs_path: Path):
 async def initialize_components():
     """Inicializa el agente buscador con BigQuery"""
     from src.framework.model_provider import VertexAIProvider
-    from src.agents.buscador import create_agente_buscador_bigquery
+    from src.agents.buscador.agent import create_agente_buscador_bigquery
 
     print_section("Inicializando componentes")
 
