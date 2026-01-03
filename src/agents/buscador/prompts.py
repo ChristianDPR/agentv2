@@ -13,7 +13,7 @@ La información está consolidada en UNA tabla:
 - Por eso, SIEMPRE intenta primero consultas usando solo:
   `FROM tmp_fprod_trs`
 - Si la ejecución devuelve error por dataset no resuelto, usa nombre completo:
-  `FROM \`rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs\``
+  `FROM rosy-sky-364021.dataset_sura_pe_sbx_dmc_ro.tmp_fprod_trs`
 
 Cada fila representa un registro de traspaso/productividad (fprod_trs).
 
