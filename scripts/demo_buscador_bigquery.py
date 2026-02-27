@@ -173,6 +173,47 @@ def _render_png_chart(chart_type: str, labels: list[str], values: list[float]) -
     return str(output_path)
 
 
+def _render_jpeg_from_png(png_path: str) -> str | None:
+    try:
+        from PIL import Image
+    except Exception:
+        print_warning("Pillow no está disponible; omitiendo JPEG.")
+        return None
+
+    jpg_path = str(Path(png_path).with_suffix(".jpg"))
+    with Image.open(png_path) as img:
+        rgb = img.convert("RGB")
+        rgb.save(jpg_path, format="JPEG", quality=90)
+    return jpg_path
+
+
+async def _upload_report(file_path: str) -> str | None:
+    bucket_name = os.getenv("BUSCADOR_REPORT_BUCKET")
+    if not bucket_name:
+        return None
+    object_prefix = os.getenv("BUSCADOR_REPORT_PREFIX", "reports")
+    object_path = f"{object_prefix}/{Path(file_path).name}"
+    try:
+        from google.cloud import storage
+        from src.tools.report_upload_tool import ReportUploadTool
+    except Exception as exc:
+        print_warning(f"No se pudo cargar upload_report_tool: {exc}")
+        return None
+
+    client = storage.Client(project=os.getenv("GOOGLE_CLOUD_PROJECT"))
+    tool = ReportUploadTool(gcs_client=client)
+    result = await tool.execute(
+        file_path=file_path,
+        bucket_name=bucket_name,
+        object_path=object_path,
+        content_type="image/jpeg" if file_path.lower().endswith(".jpg") else "image/png"
+    )
+    if result.get("error"):
+        print_warning(f"Upload falló: {result['error']}")
+        return None
+    return result.get("gcs_uri")
+
+
 def _extract_sql_results(metadata: dict) -> list[dict[str, Any]]:
     observations = metadata.get("observations", [])
     for obs in reversed(observations):
@@ -316,6 +357,16 @@ async def run_demo():
             png_path = _render_png_chart(chart_type, labels, values)
             if png_path:
                 print_info(f"PNG generado: {png_path}")
+                jpg_path = _render_jpeg_from_png(png_path)
+                if jpg_path:
+                    print_info(f"JPEG generado: {jpg_path}")
+                gcs_uri = await _upload_report(png_path)
+                if gcs_uri:
+                    print_info(f"Reporte subido: {gcs_uri}")
+                if jpg_path:
+                    gcs_jpg = await _upload_report(jpg_path)
+                    if gcs_jpg:
+                        print_info(f"Reporte JPG subido: {gcs_jpg}")
 
         if response.metadata.get("observations"):
             print_section("Observaciones")

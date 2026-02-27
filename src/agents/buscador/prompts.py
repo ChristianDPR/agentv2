@@ -78,6 +78,7 @@ de búsqueda paso a paso, NO ejecutar acciones.
 - sql_query: Consulta la base de datos BigQuery (solo SELECT)
 - list_documents: Lista documentos disponibles (como 'ls' o 'tree'). Devuelve nombres y metadata, NO contenido.
 - read_document: Lee el contenido de un documento específico (requiere nombre exacto obtenido de list_documents)
+- upload_report: Sube un archivo (PNG/JPEG/CSV/etc.) a un bucket de GCS
 - finish: Termina la búsqueda cuando tengas suficiente información
 
 ## Instrucciones
@@ -109,6 +110,7 @@ paso del plan usando las tools disponibles.
 - sql_query: Ejecuta SELECT en la base de datos. Solo SELECT permitido.
 - list_documents: Lista documentos disponibles (como 'ls' o 'tree'). Usa filter_pattern para filtrar por nombre (ej: '12345678-9', 'certificado'). Devuelve nombres y metadata, NO contenido.
 - read_document: Lee el contenido completo de un documento. Requiere el nombre exacto del archivo (obtenido de list_documents).
+- upload_report: Sube un archivo (PNG/JPEG/CSV/etc.) a un bucket de GCS.
 - finish: Termina la búsqueda y genera respuesta final
 
 ## Reglas

@@ -16,7 +16,7 @@ PEDAGOGÍA:
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from google.cloud import bigquery
+from google.cloud import bigquery, storage
 
 from src.framework.base_agent import BaseAgent, AgentResponse
 from src.framework.model_provider import ModelProvider
@@ -24,6 +24,7 @@ from src.framework.model_provider import ModelProvider
 from src.tools.bigquery_query_tool import BigQuerySQLQueryTool
 from src.tools.document_search_tool import ListDocumentsTool, ReadDocumentTool
 from src.tools.finish_tool import FinishTool
+from src.tools.report_upload_tool import ReportUploadTool
 from src.agents.buscador.prompts import PLAN_SYSTEM_PROMPT, REACT_SYSTEM_PROMPT
 from src.agents.buscador.config import MAX_ITERATIONS, MAX_LOOP_REPEATS
 
@@ -400,7 +401,8 @@ def create_agente_buscador_bigquery(
     model_provider: ModelProvider,
     documents_path: str | Path,
     bigquery_project: str | None = None,
-    default_dataset: str | None = None
+    default_dataset: str | None = None,
+    gcs_project: str | None = None
 ) -> AgenteBuscador:
     """
     Crea un AgenteBuscador configurado para BigQuery.
@@ -412,6 +414,7 @@ def create_agente_buscador_bigquery(
         default_dataset: Dataset por defecto para consultas (opcional).
     """
     bq_client = bigquery.Client(project=bigquery_project)
+    gcs_client = storage.Client(project=gcs_project or bigquery_project)
     sql_tool = BigQuerySQLQueryTool(
         bq_client=bq_client,
         default_dataset=default_dataset
@@ -419,11 +422,15 @@ def create_agente_buscador_bigquery(
     list_docs_tool = ListDocumentsTool(base_path=documents_path)
     read_doc_tool = ReadDocumentTool(base_path=documents_path)
     finish_tool = FinishTool()
+    upload_report_tool = ReportUploadTool(gcs_client=gcs_client)
 
-    return AgenteBuscador(
+    agente = AgenteBuscador(
         model_provider=model_provider,
         sql_tool=sql_tool,
         list_docs_tool=list_docs_tool,
         read_doc_tool=read_doc_tool,
         finish_tool=finish_tool
     )
+    agente.upload_report_tool = upload_report_tool
+    model_provider.register_tools(agente)
+    return agente
